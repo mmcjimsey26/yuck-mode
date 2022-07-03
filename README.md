@@ -27,12 +27,20 @@ That's literally everything.
 
 ## How do I install it?
 
-yuck-mode is available on MELPA (TODO).
+`yuck-mode` is available on MELPA (TODO).
+
 If you'd like to do it the hard way and install it manually,
-just add yuck-mode.el to your `load-path` and add the following to your ~/.emacs (or if Doom Emacs, your ~/.doom.d/config.el):
-```lisp
+just add `yuck-mode.el` to your `load-path` and add the following to your `~/.emacs`
+
+``` lisp
 (autoload 'yuck-mode "yuck-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.yuck\\'" . yuck-mode))
+```
+
+Or if you are using doom emacs add the following to your `~/.doom.d/packages.el`
+
+``` lisp
+(package! yuck-mode
+  :recipe (:host github :repo "mmcjimsey26/yuck-mode" :files ("yuck-mode.el")))
 ```
 
 ## How do I contribute?

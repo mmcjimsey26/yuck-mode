@@ -78,5 +78,8 @@
   (setq font-lock-defaults '(yuck-font-lock-keywords))
   (font-lock-ensure))
 
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.yuck\\'" . yuck-mode))
+
 (provide 'yuck-mode)
 ;;; yuck-mode.el ends here
