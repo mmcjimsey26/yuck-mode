@@ -5,7 +5,7 @@
 ;; Author: mmcjimsey26
 ;; Maintainer: mmcjimsey26
 ;; Created: June 14, 2022
-;; Modified: June 14, 2022
+;; Modified: July 3, 2022
 ;; Version: 1.0.1
 ;; Keywords: languages yuck eww widgets
 ;; Homepage: https://github.com/mmcjimsey26/yuck-mode
@@ -26,7 +26,6 @@
 ;; This mode requires Emacs-25.1 or higher.
 ;; Put this file into `load-path' and the following into ~/.emacs
 ;;      (autoload 'yuck-mode "yuck-mode" nil t)
-;;      (add-to-list 'auto-mode-alist '("\\.yuck\\'" . yuck-mode))
 
 ;;; Code:
 
