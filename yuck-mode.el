@@ -6,7 +6,7 @@
 ;; Maintainer: mmcjimsey26
 ;; Created: June 14, 2022
 ;; Modified: June 14, 2022
-;; Version: 0.0.1
+;; Version: 1.0.1
 ;; Keywords: languages yuck eww widgets
 ;; Homepage: https://github.com/mmcjimsey26/yuck-mode
 ;; Package-Requires: ((emacs "25.1"))
