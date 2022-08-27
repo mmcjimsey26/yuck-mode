@@ -59,7 +59,7 @@
   `(
     (,yuck-keywords-regex . font-lock-keyword-face)
     (,yuck-widgets-regex . font-lock-type-face)
-    (,"\:[a-z\-]*" . font-lock-function-name-face)))
+    ("\:[a-z\-]*" . font-lock-builtin-face)))
 
 (defconst yuck-mode-syntax-table
   (let ((table (make-syntax-table)))
