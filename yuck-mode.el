@@ -74,7 +74,11 @@
 (define-derived-mode yuck-mode prog-mode "Yuck"
   "Major mode for editing yuck config files."
   :syntax-table yuck-mode-syntax-table
-  (setq font-lock-defaults '(yuck-font-lock-keywords))
+  (setq-local font-lock-defaults '(yuck-font-lock-keywords))
+  (setq-local comment-start ";; ")
+  (setq-local comment-end "")
+  (setq-local comment-padding "")
+  (run-mode-hooks 'yuck-mode-hook)
   (font-lock-ensure))
 
 ;;;###autoload
