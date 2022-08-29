@@ -47,15 +47,11 @@
     "input" "button" "image" "box" "overlay" "centerbox" "scroll" "eventbox"
     "label" "literal" "calendar" "transform" "circular-progress" "graph"))
 
-(defvar yuck-keywords-regex)
-(defvar yuck-widgets-regex)
-(defvar yuck-font-lock-keywords)
-
 ;; Regex to highlight buffer.
-(setq yuck-keywords-regex (regexp-opt yuck-keywords-list 'words))
-(setq yuck-widgets-regex (regexp-opt yuck-widgets-list 'words))
+(defvar yuck-keywords-regex (regexp-opt yuck-keywords-list 'words))
+(defvar yuck-widgets-regex (regexp-opt yuck-widgets-list 'words))
 
-(setq yuck-font-lock-keywords
+(defvar yuck-font-lock-keywords
   `(
     (,yuck-keywords-regex . font-lock-keyword-face)
     (,yuck-widgets-regex . font-lock-type-face)
