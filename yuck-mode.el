@@ -64,6 +64,12 @@
     (modify-syntax-entry ?\` "\"" table)
     (modify-syntax-entry ?\; "<" table)
     (modify-syntax-entry ?\n ">" table)
+    (modify-syntax-entry ?\( "()" table)
+    (modify-syntax-entry ?\) ")(" table)
+    (modify-syntax-entry ?\[ "(]" table)
+    (modify-syntax-entry ?\] ")[" table)
+    (modify-syntax-entry ?\{ "(}" table)
+    (modify-syntax-entry ?\} "){" table)
     table))
 
 ;;;###autoload
