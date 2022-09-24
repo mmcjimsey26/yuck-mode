@@ -38,24 +38,32 @@
 (defvar yuck-mode-hook nil "Yuck mode hook.")
 
 ;; Keywords and widget types for `yuck-mode'.
-(defvar yuck-keywords-list
-  '("defvar" "defpoll" "deflisten" "defwindow" "defwidget" "for" "include"))
+;; Byte-compile the code for optimized regexps
+(eval-and-compile
+  (defvar yuck-keywords-list
+     '("defvar" "defpoll" "deflisten" "defwindow" "defwidget" "for" "include"))
 
-(defvar yuck-widgets-list
-  '("combo-box-text"
-    "expander" "revealer" "checkbox" "color-button" "color-chooser" "scale" "progress"
-    "input" "button" "image" "box" "overlay" "centerbox" "scroll" "eventbox"
-    "label" "literal" "calendar" "transform" "circular-progress" "graph"))
+  (defvar yuck-widgets-list
+    '("combo-box-text"
+      "expander" "revealer" "checkbox" "color-button" "color-chooser" "scale" "progress"
+      "input" "button" "image" "box" "overlay" "centerbox" "scroll" "eventbox"
+      "label" "literal" "calendar" "transform" "circular-progress" "graph")))
 
-;; Regex to highlight buffer.
-(defvar yuck-keywords-regex (regexp-opt yuck-keywords-list 'words))
-(defvar yuck-widgets-regex (regexp-opt yuck-widgets-list 'words))
+(eval-and-compile
+  (defun yuck-ppre (re)
+    (format "\\<\\(%s\\)\\>" (regexp-opt re))))
 
 (defvar yuck-font-lock-keywords
-  `(
-    (,yuck-keywords-regex . font-lock-keyword-face)
-    (,yuck-widgets-regex . font-lock-type-face)
-    ("\:[a-z\-]*" . font-lock-builtin-face)))
+  (list
+   (cons (eval-when-compile
+           (format "\:[a-z\-]*"))
+         font-lock-builtin-face)
+   (cons (eval-when-compile
+           (yuck-ppre yuck-keywords-list))
+         font-lock-keyword-face)
+   (cons (eval-when-compile
+           (yuck-ppre yuck-widgets-list))
+         font-lock-type-face)))
 
 (defconst yuck-mode-syntax-table
   (let ((table (make-syntax-table)))
