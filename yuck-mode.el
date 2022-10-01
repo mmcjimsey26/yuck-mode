@@ -47,11 +47,11 @@
     '("combo-box-text"
       "expander" "revealer" "checkbox" "color-button" "color-chooser" "scale" "progress"
       "input" "button" "image" "box" "overlay" "centerbox" "scroll" "eventbox"
-      "label" "literal" "calendar" "transform" "circular-progress" "graph")))
+      "label" "literal" "calendar" "transform" "circular-progress" "graph" "geometry")))
 
 (eval-and-compile
   (defun yuck-ppre (re)
-    (format "\\<\\(%s\\)\\>" (regexp-opt re))))
+    (format "\\_<\\(%s\\)\\>" (regexp-opt re))))
 
 (defvar yuck-font-lock-keywords
   (list
