@@ -51,8 +51,6 @@
   "Yuck Configuration Major Mode."
   :group 'languages)
 
-(defconst yuck-mode-menu nil "Menu for yuck mode.")
-
 (defvar yuck-mode-hook nil "Yuck mode hook.")
 
 ;; Keywords and widget types for `yuck-mode'.
@@ -106,7 +104,6 @@
   (setq-local comment-start ";; ")
   (setq-local comment-end "")
   (setq-local comment-padding "")
-  (run-mode-hooks 'yuck-mode-hook)
   (font-lock-ensure))
 
 ;;;###autoload
