@@ -2,7 +2,7 @@
 
 # yuck-mode
 
-[[https://melpa.org/#/yuck-mode][file:https://melpa.org/packages/yuck-mode-badge.svg]]
+[![MELPA](https://melpa.org/packages/yuck-mode-badge.svg)](https://melpa.org/#/yuck-mode)
 
 Emacs major mode for editing yuck configuration files for [ElKowar's Wacky Widgets (eww)](https://github.com/elkowar/eww). I'll answer your burning questions below.
 
