@@ -10,10 +10,8 @@
 ;; Keywords: languages yuck eww widgets
 ;; Homepage: https://github.com/mmcjimsey26/yuck-mode
 ;; Package-Requires: ((emacs "25.1"))
-;;
-;; This file is not part of GNU Emacs.
 
-;;; Commentary:
+;; This file is not part of GNU Emacs.
 
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to deal
@@ -33,11 +31,15 @@
 ;; OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ;; SOFTWARE.
 
+;;; Commentary:
+
 ;; A simple major mode for editing files in the yuck configuration language, used for
 ;; configuring ElKowar's Wacky Widgets (eww), usually ending in `.yuck'.
 
 ;; This package provides the following features:
 ;;      * Syntax hilighting
+;;      * Indentation
+;;      * Commenting
 
 ;;; Installation:
 

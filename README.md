@@ -2,6 +2,8 @@
 
 # yuck-mode
 
+[[https://melpa.org/#/yuck-mode][https://melpa.org/packages/yuck-mode-badge.svg]]
+
 Emacs major mode for editing yuck configuration files for [ElKowar's Wacky Widgets (eww)](https://github.com/elkowar/eww). I'll answer your burning questions below.
 
 </div>
@@ -22,25 +24,26 @@ even with simple syntax highlighting. It may not be for everyone, but it can be 
 ## What features are there?
 
 + Syntax highlighting for all keywords and widget types in the yuck configuration language.
++ Indentation
++ Commenting
 
 That's literally everything.
 
 ## How do I install it?
 
-`yuck-mode` is available on MELPA (TODO).
+`yuck-mode` is available on [MELPA](https://melpa.org/#/yuck-mode) so if you have MELPA configured then you can do a
+`package-install` yuck-mode.
 
-If you'd like to do it the hard way and install it manually,
-just add `yuck-mode.el` to your `load-path` and add the following to your `~/.emacs`
+Or if you are using straight:
 
 ``` lisp
-(autoload 'yuck-mode "yuck-mode" nil t)
+(straight-use-package 'yuck-mode)
 ```
 
-Or if you are using doom emacs add the following to your `~/.doom.d/packages.el`
+Or if you are using Doom Emacs add the following to your `~/.doom.d/packages.el`:
 
 ``` lisp
-(package! yuck-mode
-  :recipe (:host github :repo "mmcjimsey26/yuck-mode" :files ("yuck-mode.el")))
+(package! yuck-mode)
 ```
 
 ## How do I contribute?
