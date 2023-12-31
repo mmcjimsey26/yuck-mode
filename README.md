@@ -8,9 +8,6 @@ Emacs major mode for editing yuck configuration files for [ElKowar's Wacky Widge
 
 </div>
 
-## Note:
-This package is not yet available on MELPA, although it will be in the near future.
-
 ## What even is this?
 
 `yuck-mode` is a barebones (65 sloc) major mode for editing yuck config files. It is nothing more than the most minimal major mode that you can think of.
